@@ -1,0 +1,25 @@
+<p>
+<%= image_tag(@product.picture_url, :width => 450) if @product.picture.present? %>
+</p>
+<p>
+  <strong> Name's product: </strong>
+ <%= @product.name.capitalize %>	
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @product.description.capitalize %>
+</p>
+
+<p>
+  <strong>Looking for:</strong>
+  <%= @product.iteminexchange.capitalize %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @product.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
