@@ -2,10 +2,12 @@
 <html>
 <head>
   <title>ProjetRor</title>
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="bootstrap.css" />
 </head>
 <body>
 
@@ -18,7 +20,7 @@
     </div>
 	<p class="navbar-text pull-right">
 <% if user_signed_in? %>
-  Logged in as <strong><%= current_user.username %></strong>.
+  Logged in as <strong><%= current_user.email %></strong>.
   <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
   <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
 <% else %>
@@ -29,7 +31,7 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="/products">Products</a>
 		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#"></a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#"></a>salut les enfants</li>
     <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li></li>
       </ul>
     </div>
@@ -44,14 +46,13 @@
 <div class="container">
   <%= yield %>
 </div>
-<footer>
-  <div class="container">
+<footer class="row">
+    <div class="col-lg-12">
    <strong> Ruby on Rails Project 2014 </strong> </br> </br>
 	Dina Laiarinandrasana </br>
 	Maxime Perrault </br>
 	ESIEA
-  </div>
+        </div>
 </footer>
-<script src="//railsgirls.com/assets/bootstrap.js"></script>
 </body>
 </html>

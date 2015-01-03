@@ -1,25 +1,30 @@
-<p>
-<%= image_tag(@product.picture_url, :width => 450) if @product.picture.present? %>
-</p>
-<p>
-  <strong> Name's product: </strong>
- <%= @product.name.capitalize %>	
-</p>
 
-<p>
+
+<section class="box">
+<div id="photo_produit">
+<%= image_tag(@product.picture_url, :width => 450) if @product.picture.present? %>
+</div>
+
+<div class="col-lg-offset-4 col-lg-4 col-lg-offset-4">
+ <%= @product.name.capitalize %>	
+</div>
+
+<div class="col-lg-offset-4 col-lg-4 col-lg-offset-4">
   <strong>Description:</strong>
   <%= @product.description.capitalize %>
-</p>
+</div>
 
-<p>
+<div class="col-lg-offset-4 col-lg-4 col-lg-offset-4">
   <strong>Looking for:</strong>
   <%= @product.iteminexchange.capitalize %>
-</p>
+</div>
 
-<p>
+<div class="col-lg-offset-4 col-lg-4 col-lg-offset-4">
   <strong>User:</strong>
-  <%= @product.user_id %>
-</p>
+  <%= current_user.email %>
+</div>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
+</section>
+
