@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'ruby', '2.0.0'
 gem 'rails', '4.1.8'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
@@ -11,6 +12,7 @@ group :production do
   gem 'pg'
 end
 gem 'devise'
+gem 'rails_12factor'
 gem 'carrierwave'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
