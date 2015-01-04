@@ -10,6 +10,15 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
     root 'products#index'
 
+  # Create and destroy session when login or logout
+	namespace :api do
+	namespace :v1 do
+    devise_scope :user do
+      post 'sessions' => 'sessions#create', :as => 'login'
+      delete 'sessions' => 'sessions#destroy', :as => 'logout'
+    end
+  end
+end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

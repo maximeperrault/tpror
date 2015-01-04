@@ -11,6 +11,7 @@ group :production do
   gem 'pg'
 end
 gem 'devise'
+gem 'simple_token_authentication', '~> 1.0'
 gem 'rails_12factor', group: :production
 gem 'carrierwave'
 # Use SCSS for stylesheets
