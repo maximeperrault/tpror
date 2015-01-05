@@ -1,0 +1,11 @@
+Installation de l'application RoR : 
+
+1) installer Ruby on rails (voir cours de PE Fabrigli pour l'installation sur linux / Installer RailsInstaller sur Windows)
+2) Ouvrir un terminal et tapez :
+
+$cd racineDuProjet //déplacer jusqu'à la racine
+$rake db:migrate  // Migration de la base de donnée
+$rails server    // Lancement du server en local
+
+3)Ouvrir une page d'un navigateur
+4)Aller à l'adresse : localhost:3000

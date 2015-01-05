@@ -6,8 +6,7 @@
       <th>Name</th>
       <th>Description</th>
       <th>Item in exchange</th>
-      <th>User</th>
-      <th colspan="4"></th>
+      <th colspan="3"></th>
     </tr>
   </thead>
 
@@ -17,7 +16,6 @@
         <td><%= product.name.capitalize %></td>
         <td><%= product.description.capitalize %></td>
         <td><%= product.iteminexchange.capitalize %></td>
-        <td><%= product.user_id %></td>
         <td><button class="btn-default type="button"><%= link_to 'Show', product %></button></td>
         <td><button class="btn-default type="button"><%= link_to 'Edit', edit_product_path(product) %></button></td>
         <td><button class="btn-default type="button"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
@@ -28,5 +26,5 @@
 
 <br>
 <% if user_signed_in? %>
-<%= link_to 'New Product', new_product_path %>
+<%= link_to 'Add a product !', new_product_path %>
 <% end %>
